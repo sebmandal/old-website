@@ -32,5 +32,10 @@ Object.entries(routes).forEach(([_, Route]) => {
 	new Route().run(app);
 });
 
+app.use((req: any, res: any) => {
+	res.status(404);
+	return res.redirect("/");
+});
+
 // Start the Express server
 app.listen(process.env.PORT || 3000);
