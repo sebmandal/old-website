@@ -6,11 +6,16 @@ Certain parts of this website were yoinked from my not-so-real startup website [
 
 ### Technologies:
 
-- SCSS (Sass)
 - EJS (Embedded JavaScript)
 - Express.js
 - Node.js
 - TypeScript
+- ###### Maybe soon SCSS
 
 ### For developers
-###### I'll add this provided demand for it
+
+I'll add this provided demand for it
+
+### .env includes
+
+`COOKIESECRET`: string

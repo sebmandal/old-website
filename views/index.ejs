@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include("./partials/head.ejs") %>
+		<title>sebmandal</title>
+	</head>
+	<body class="container-md">
+		<%- include("./partials/nav.ejs") %>
+		<div class="row">
+			<!-- About Me -->
+			<div id="about" class="col-12 my-1 mt-0 pt-0">
+				<h1>About Me</h1>
+				<pre><code class="language-typescript">const name: string = "Sebastian Pritchard-Davies Mandal";
+const nationality: string = "Norwegian";
+const pronouns: array = ["he", "him"];
+let age: number = 16;</code></pre>
+			</div>
+			<!-- End -->
+
+			<hr />
+
+			<!-- Education Timeline -->
+			<div id="education" class="col-12 my-1">
+				<h1>Education</h1>
+				<ul class="timeline">
+					<li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+						<div class="timeline-arrow"></div>
+						<h3 class="mb-0 mb-1">Elementary School</h3>
+						<h4 class="mb-0">
+							<i class="bi bi-pin p-1"></i>Vestfossen Barne- og Ungdomskole
+						</h4>
+						<span class="small text-gray"
+							><i class="fa fa-clock-o mr-1"></i>2011 - 2017</span
+						>
+						<p class="mt-2 font-weight-light">Elementary - Grade 1 to 6</p>
+					</li>
+					<li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+						<div class="timeline-arrow"></div>
+						<h3 class="mb-0 mb-1">Middle / Secondary</h3>
+						<h4 class="mb-0">
+							<i class="bi bi-pin p-1"></i>Kongsberg International School
+						</h4>
+						<span class="small text-gray"
+							><i class="fa fa-clock-o mr-1"></i>2017 - 2021</span
+						>
+						<p class="mt-2 font-weight-light">Secondary - Grade 7 to 10</p>
+					</li>
+					<li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+						<div class="timeline-arrow"></div>
+						<h3 class="mb-0 mb-1 mb-1">
+							Information Technology and Media Production
+						</h3>
+						<h4 class="mb-0">
+							<i class="bi bi-pin p-1"></i>Akademiet Sundland
+						</h4>
+						<span class="small text-gray"
+							><i class="fa fa-clock-o mr-1"></i>2021 - 2023</span
+						>
+						<p class="mt-2 font-weight-light">
+							Upper secondary - Grade 11 to 12
+						</p>
+					</li>
+				</ul>
+			</div>
+			<!-- End -->
+
+			<hr />
+
+			<!-- Product Display -->
+			<div id="projects" class="col-12 my-1">
+				<h1>Noteworthy Projects</h1>
+				<ul class="px-0">
+					<li
+						class="
+							row
+							d-flex
+							align-items-center
+							justify-content-center justify-content-md-start
+						"
+					>
+						<img
+							class="col-md-2 p-md-3 p-0 pb-3 px-3"
+							src="/img/tebone/tebone transparent.svg"
+							alt="tebone"
+							height="500"
+							width="500"
+							style="max-height: 200px; aspect-ratio: 1/1"
+						/>
+						<div class="col-md-10 text-center text-md-start">
+							<a
+								href="https://github.com/sebmandal/tebone"
+								class="link text-reset fs-2"
+								>tebone</a
+							>
+							<br />
+							tebone (TEB1) is a developer friendly framework for building web
+							applications, in which I singlehandedly wrote from scratch in
+							TypeScript.
+							<br />
+							<strong>this website was built using tebone.</strong>
+						</div>
+					</li>
+					<hr />
+					<li
+						class="
+							row
+							d-flex
+							align-items-center
+							justify-content-center justify-content-md-start
+						"
+					>
+						<img
+							class="col-md-2 p-md-3 p-0 pb-3 px-3"
+							src="/img/mando/mando transparent.svg"
+							alt="mando"
+							height="500"
+							width="500"
+							style="max-height: 200px; aspect-ratio: 1/1"
+						/>
+						<div class="col-md-10 text-center text-md-start">
+							<a
+								href="https://github.com/sebmandal/mando"
+								class="link text-reset fs-2"
+								>Mando</a
+							>
+							<br />
+							Mando is an open source, utility Discord bot for fun,
+							administration and utility purposes. Mando was developed in
+							TypeScript and was built in a similar fashion to tebone.
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- End -->
+
+			<hr />
+
+			<!-- Social Links -->
+			<div id="socials" class="col-12 my-1 mb-4">
+				<h1>Social Links</h1>
+				<a
+					class="btn text-white mb-1"
+					style="background-color: #333333"
+					href="https://github.com/sebmandal"
+					role="button"
+					><i class="bi bi-github me-3"></i>Github</a
+				>
+				<a
+					class="btn text-white mb-1"
+					style="background-color: rgb(58, 71, 255)"
+					href="https://twitter.com/sebmandal"
+					role="button"
+					><i class="bi bi-twitter me-3"></i>Twitter</a
+				>
+				<a
+					class="btn text-white mb-1"
+					style="background-color: rgb(131, 91, 39)"
+					href="https://instagram.com/sebmandal"
+					role="button"
+					><i class="bi bi-instagram me-3"></i>Instagram</a
+				>
+				<a
+					class="btn text-white mb-1"
+					style="background-color: rgb(116, 116, 116)"
+					href="mailto:sebastian.mandal@icloud.com"
+					role="button"
+					><i class="bi bi-envelope me-3"></i>Email</a
+				>
+			</div>
+			<!-- End -->
+		</div>
+		<%- include("./partials/footer.ejs") %>
+	</body>
+</html>
