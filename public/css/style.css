@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&display=swap");
+
+/* Core */
+
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	font-family: "Playfair Display", Times, serif !important;
+	font-size: clamp(20px, 1.33vw, 28px) !important;
+	background-color: #f6f6f1 !important;
+}
+
+header {
+	font-size: 1.33em;
+}
+
+/* Links */
+
+.link:hover {
+	color: #666 !important;
+}
+
+.link-unstyled,
+.link-unstyled:hover {
+	font-style: inherit;
+	color: inherit;
+	font-size: inherit;
+	text-decoration: none;
+	font-variant: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	font-family: inherit;
+	border-radius: inherit;
+	border: inherit;
+	outline: inherit;
+	box-shadow: inherit;
+	padding: inherit;
+	vertical-align: inherit;
+}
+
+/* Timeline */
+
+ul.timeline {
+	list-style-type: none;
+	position: relative;
+	padding-left: 1.5rem;
+	font-size: 18px;
+}
+
+ul.timeline:before {
+	content: " ";
+	background: #fff;
+	display: inline-block;
+	position: absolute;
+	left: 16px;
+	width: 4px;
+	height: 100%;
+	z-index: 400;
+	border-radius: 1rem;
+}
+
+li.timeline-item {
+	margin: 20px 20px;
+}
+
+.timeline-arrow {
+	border-top: 0.5rem solid transparent;
+	border-right: 0.5rem solid #fff;
+	border-bottom: 0.5rem solid transparent;
+	display: block;
+	position: absolute;
+	left: 2rem;
+}
+
+li.timeline-item::before {
+	content: " ";
+	background: #ddd;
+	display: inline-block;
+	position: absolute;
+	border-radius: 50%;
+	border: 3px solid #fff;
+	left: 11px;
+	width: 14px;
+	height: 14px;
+	z-index: 400;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
