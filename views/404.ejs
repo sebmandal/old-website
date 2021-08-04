@@ -8,7 +8,9 @@
 		<%- include("./partials/nav.ejs") %>
 		<div class="row">
 			<!-- 404 error page -->
-			<div class="col-md-6">
+
+			<!-- Illustration on computer view -->
+			<div class="col-md-6 d-md-block d-none">
 				<img
 					class="w-100"
 					src="/img/illustration/undraw_road_sign_mfpo.svg"
@@ -16,6 +18,8 @@
 					height="500"
 				/>
 			</div>
+
+			<!-- Innter text -->
 			<div
 				class="
 					col-md-6
@@ -27,11 +31,21 @@
 			>
 				<div class="text-center text-md-start">
 					<h1>Are you lost?</h1>
-					<br />
-					<a href="/" class="link text-reset"
+					<br class="d-md-block d-none" />
+					<a href="/" class="link text-reset link-unstyled"
 						>Head back to the home page by pressing this text</a
 					>
 				</div>
+			</div>
+
+			<!-- Illustration on mobile view -->
+			<div class="col-md-6 d-md-none">
+				<img
+					class="w-100"
+					src="/img/illustration/undraw_road_sign_mfpo.svg"
+					alt="lost_illustration"
+					height="500"
+				/>
 			</div>
 		</div>
 
