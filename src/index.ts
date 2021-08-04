@@ -34,7 +34,7 @@ Object.entries(routes).forEach(([_, Route]) => {
 
 app.use((req: any, res: any) => {
 	res.status(404);
-	return res.redirect("/");
+	return res.render("404");
 });
 
 // Start the Express server
