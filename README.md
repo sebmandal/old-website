@@ -6,11 +6,16 @@ Certain parts of this website were yoinked from my not-so-real startup website [
 
 ### Technologies:
 
-- EJS (Embedded JavaScript)
+#### Backend
+
 - Express.js
 - Node.js
 - TypeScript
-- ###### Maybe soon SCSS
+
+#### Frontend
+
+- EJS (Embedded JavaScript)
+- Bootstrap
 
 ### For developers
 
