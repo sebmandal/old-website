@@ -108,13 +108,12 @@ li.timeline-item::before {
 	background-size: cover;
 	position: relative;
 	/* border: 1px solid lighten(black, 10); */
-	transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+	transition: all 1000ms cubic-bezier(0.68, -0.45, 0.365, 1.55);
 	overflow: hidden;
 }
 
 .grow-item:hover {
-	flex-grow: 4.3;
-	background-color: lighten(darkred, 20);
+	flex-grow: 3;
 }
 
 .grow-item p {

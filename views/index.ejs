@@ -4,205 +4,222 @@
 		<%- include("./partials/head.ejs") %>
 		<title>sebmandal</title>
 	</head>
-	<body class="container-md">
-		<%- include("./partials/nav.ejs") %>
-		<div class="row">
-			<!-- About Me -->
-			<div id="about" class="col-12 my-1 mt-0 pt-0">
-				<h1>About Me</h1>
-				<pre
-					class="prettify mt-3 p-2 about-me"
-				><code class="language-typescript">// Language: TypeScript
-this.person = new Human({
+	<body>
+		<section id="page-content" class="container-md" style="display: none">
+			<%- include("./partials/nav.ejs") %>
+			<div class="row">
+				<!-- About Me -->
+				<div id="about" class="col-12 my-1 mt-0 pt-0">
+					<h1>About Me</h1>
+					<pre
+						class="prettify mt-3 p-2 about-me"
+					><code class="language-typescript">// Language: TypeScript
+    this.person = new Human({
     name: "Sebastian Pritchard-Davies Mandal",
     ethnicity: "Norwegian",
     pronouns: ["he", "him"],
     age: "16 years",
 })</code></pre>
-			</div>
-			<!-- End -->
-
-			<hr />
-
-			<!-- Education Timeline -->
-
-			<div id="education" class="col-12 my-1">
-				<h1>Education</h1>
-
-				<!-- Alternative -->
-				<div class="flexbox-item-grow-on-hover my-3">
-					<button
-						onclick="delay('https://ovre-eiker.kommune.no/skole-barnehage/grunnskole/vestfossen-barneskole')"
-						class="grow-item"
-						content="Vestfossen Barne- og Ungdomskole"
-						hover-content="Elementary"
-						style="
-							background-image: linear-gradient(
-									rgba(0, 0, 0, 0.5),
-									rgba(0, 0, 0, 0.5)
-								),
-								url('/img/index items/vestfossen barneskole is garbage.png');
-						"
-					></button>
-					<button
-						onclick="delay('https://kischool.org')"
-						class="grow-item"
-						content="Kongsberg International School"
-						style="
-							background-image: linear-gradient(
-									rgba(0, 0, 0, 0.5),
-									rgba(0, 0, 0, 0.5)
-								),
-								url('/img/index items/KIS.jpg');
-						"
-					></button>
-					<button
-						onclick="delay('https://www.akademiet.no/vgs/skolesteder/drammen-sundland/')"
-						class="grow-item"
-						content="Akademiet VGS Sundland"
-						style="
-							background-image: linear-gradient(
-									rgba(0, 0, 0, 0.5),
-									rgba(0, 0, 0, 0.5)
-								),
-								url('/img/index items/Akademiet.jpg');
-						"
-					></button>
 				</div>
+				<!-- End -->
 
-				<!-- Current -->
-				<ul class="timeline">
-					<li class="timeline-item bg-white rounded ml-3 p-4 shadow">
-						<div class="timeline-arrow"></div>
-						<h3 class="mb-0 mb-1">Elementary School</h3>
-						<h4 class="mb-0">
-							<i class="bi bi-pin p-1"></i>Vestfossen Barne- og Ungdomskole
-						</h4>
-						<span class="small text-gray"
-							><i class="fa fa-clock-o mr-1"></i>2011 - 2017</span
+				<hr />
+
+				<!-- Education Timeline -->
+
+				<div id="education" class="col-12 my-1">
+					<h1>Education</h1>
+
+					<!-- Alternative -->
+					<div class="flexbox-item-grow-on-hover my-3">
+						<button
+							onclick="delay('https://ovre-eiker.kommune.no/skole-barnehage/grunnskole/vestfossen-barneskole')"
+							class="grow-item"
+							content="Vestfossen Barne- og Ungdomskole"
+							hover-content="Elementary"
+							style="
+								background-image: linear-gradient(
+										rgba(0, 0, 0, 0.5),
+										rgba(0, 0, 0, 0.5)
+									),
+									url('/img/index items/vestfossen barneskole is garbage.png');
+							"
+						></button>
+						<button
+							onclick="delay('https://kischool.org')"
+							class="grow-item"
+							content="Kongsberg International School"
+							style="
+								background-image: linear-gradient(
+										rgba(0, 0, 0, 0.5),
+										rgba(0, 0, 0, 0.5)
+									),
+									url('/img/index items/KIS.jpg');
+							"
+						></button>
+						<button
+							onclick="delay('https://www.akademiet.no/vgs/skolesteder/drammen-sundland/')"
+							class="grow-item"
+							content="Akademiet VGS Sundland"
+							style="
+								background-image: linear-gradient(
+										rgba(0, 0, 0, 0.5),
+										rgba(0, 0, 0, 0.5)
+									),
+									url('/img/index items/Akademiet.jpg');
+							"
+						></button>
+					</div>
+
+					<!-- Current -->
+					<ul class="timeline">
+						<li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+							<div class="timeline-arrow"></div>
+							<h3 class="mb-0 mb-1">Elementary School</h3>
+							<h4 class="mb-0">
+								<i class="bi bi-pin p-1"></i>Vestfossen Barne- og Ungdomskole
+							</h4>
+							<span class="small text-gray"
+								><i class="fa fa-clock-o mr-1"></i>2011 - 2017</span
+							>
+							<p class="mt-2 font-weight-light">Elementary - Grade 1 to 6</p>
+						</li>
+						<li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+							<div class="timeline-arrow"></div>
+							<h3 class="mb-0 mb-1">Middle / Secondary</h3>
+							<h4 class="mb-0">
+								<i class="bi bi-pin p-1"></i>Kongsberg International School
+							</h4>
+							<span class="small text-gray"
+								><i class="fa fa-clock-o mr-1"></i>2017 - 2021</span
+							>
+							<p class="mt-2 font-weight-light">Secondary - Grade 7 to 10</p>
+						</li>
+						<li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+							<div class="timeline-arrow"></div>
+							<h3 class="mb-0 mb-1 mb-1">
+								Information Technology and Media Production
+							</h3>
+							<h4 class="mb-0">
+								<i class="bi bi-pin p-1"></i>Akademiet Sundland
+							</h4>
+							<span class="small text-gray"
+								><i class="fa fa-clock-o mr-1"></i>2021 - 2023</span
+							>
+							<p class="mt-2 font-weight-light">
+								Upper secondary - Grade 11 to 12
+							</p>
+						</li>
+					</ul>
+				</div>
+				<!-- End -->
+
+				<hr />
+
+				<!-- Product Display -->
+				<div id="projects" class="col-12 my-1">
+					<h1>Noteworthy Projects</h1>
+					<ul class="px-0">
+						<li
+							class="
+								row
+								d-flex
+								align-items-center
+								justify-content-center justify-content-md-start
+							"
 						>
-						<p class="mt-2 font-weight-light">Elementary - Grade 1 to 6</p>
-					</li>
-					<li class="timeline-item bg-white rounded ml-3 p-4 shadow">
-						<div class="timeline-arrow"></div>
-						<h3 class="mb-0 mb-1">Middle / Secondary</h3>
-						<h4 class="mb-0">
-							<i class="bi bi-pin p-1"></i>Kongsberg International School
-						</h4>
-						<span class="small text-gray"
-							><i class="fa fa-clock-o mr-1"></i>2017 - 2021</span
+							<object
+								class="col-md-2 p-md-3 p-0 pb-3 px-3"
+								data="/img/tebone/tebone transparent.svg"
+								type="image/svg+xml"
+								style="max-height: 200px; aspect-ratio: 1/1"
+							></object>
+							<div class="col-md-10 text-center text-md-start">
+								<a href="/tebone" class="link text-reset fs-2">tebone</a>
+								<br />
+								tebone (TEB1) is a developer friendly framework for building web
+								applications, in which I singlehandedly wrote from scratch in
+								TypeScript.
+								<br />
+								<strong>this website was built using tebone.</strong>
+							</div>
+						</li>
+						<hr />
+						<li
+							class="
+								row
+								d-flex
+								align-items-center
+								justify-content-center justify-content-md-start
+							"
 						>
-						<p class="mt-2 font-weight-light">Secondary - Grade 7 to 10</p>
-					</li>
-					<li class="timeline-item bg-white rounded ml-3 p-4 shadow">
-						<div class="timeline-arrow"></div>
-						<h3 class="mb-0 mb-1 mb-1">
-							Information Technology and Media Production
-						</h3>
-						<h4 class="mb-0">
-							<i class="bi bi-pin p-1"></i>Akademiet Sundland
-						</h4>
-						<span class="small text-gray"
-							><i class="fa fa-clock-o mr-1"></i>2021 - 2023</span
+							<object
+								class="col-md-2 p-md-3 p-0 pb-3 px-3"
+								data="/img/mando/mando transparent.svg"
+								type="image/svg+xml"
+								style="height: 200px; aspect-ratio: 1/1"
+							></object>
+							<div class="col-md-10 text-center text-md-start">
+								<a href="/mando" class="link text-reset fs-2">Mando</a>
+								<br />
+								Mando is an open source, utility Discord bot for fun,
+								administration and utility purposes. Mando was developed in
+								TypeScript and was built in a similar fashion to tebone.
+							</div>
+						</li>
+						<hr />
+						<li
+							class="
+								row
+								d-flex
+								align-items-center
+								justify-content-center justify-content-md-start
+							"
 						>
-						<p class="mt-2 font-weight-light">
-							Upper secondary - Grade 11 to 12
-						</p>
-					</li>
-				</ul>
+							<object
+								class="col-md-2 p-md-3 p-0 pb-3 px-3"
+								data="/img/logo.svg"
+								type="image/svg+xml"
+								style="height: 200px; aspect-ratio: 1/1"
+							></object>
+							<div class="col-md-10 text-center text-md-start">
+								<a href="/comp" class="link text-reset fs-2"
+									>My best frontend work</a
+								>
+								<br />
+								I made a website that was supposed to represent a startup which
+								is entirely made up, but it sure was a fun project! The source
+								code is available
+								<a
+									href="https://github.com/mndl-official/website"
+									class="text-reset"
+									>here</a
+								>.
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- End -->
 			</div>
-			<!-- End -->
 
 			<hr />
 
-			<!-- Product Display -->
-			<div id="projects" class="col-12 my-1">
-				<h1>Noteworthy Projects</h1>
-				<ul class="px-0">
-					<li
-						class="
-							row
-							d-flex
-							align-items-center
-							justify-content-center justify-content-md-start
-						"
-					>
-						<object
-							class="col-md-2 p-md-3 p-0 pb-3 px-3"
-							data="/img/tebone/tebone transparent.svg"
-							type="image/svg+xml"
-							style="max-height: 200px; aspect-ratio: 1/1"
-						></object>
-						<div class="col-md-10 text-center text-md-start">
-							<a href="/tebone" class="link text-reset fs-2">tebone</a>
-							<br />
-							tebone (TEB1) is a developer friendly framework for building web
-							applications, in which I singlehandedly wrote from scratch in
-							TypeScript.
-							<br />
-							<strong>this website was built using tebone.</strong>
-						</div>
-					</li>
-					<hr />
-					<li
-						class="
-							row
-							d-flex
-							align-items-center
-							justify-content-center justify-content-md-start
-						"
-					>
-						<object
-							class="col-md-2 p-md-3 p-0 pb-3 px-3"
-							data="/img/mando/mando transparent.svg"
-							type="image/svg+xml"
-							style="height: 200px; aspect-ratio: 1/1"
-						></object>
-						<div class="col-md-10 text-center text-md-start">
-							<a href="/mando" class="link text-reset fs-2">Mando</a>
-							<br />
-							Mando is an open source, utility Discord bot for fun,
-							administration and utility purposes. Mando was developed in
-							TypeScript and was built in a similar fashion to tebone.
-						</div>
-					</li>
-					<hr />
-					<li
-						class="
-							row
-							d-flex
-							align-items-center
-							justify-content-center justify-content-md-start
-						"
-					>
-						<object
-							class="col-md-2 p-md-3 p-0 pb-3 px-3"
-							data="/img/logo.svg"
-							type="image/svg+xml"
-							style="height: 200px; aspect-ratio: 1/1"
-						></object>
-						<div class="col-md-10 text-center text-md-start">
-							<a href="/comp" class="link text-reset fs-2"
-								>My best frontend work</a
-							>
-							<br />
-							I made a website that was supposed to represent a startup which is
-							entirely made up, but it sure was a fun project! The source code
-							is available
-							<a
-								href="https://github.com/mndl-official/website"
-								class="text-reset"
-								>here</a
-							>.
-						</div>
-					</li>
-				</ul>
+			<%- include("./partials/footer.ejs") %>
+		</section>
+
+		<section id="loader" style="display: block">
+			<div class="lds-roller">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
 			</div>
-			<!-- End -->
-		</div>
+		</section>
 
-		<hr />
-
-		<%- include("./partials/footer.ejs") %>
+		<%- include("./partials/scripts.ejs") %>
 	</body>
 </html>
