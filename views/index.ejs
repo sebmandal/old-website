@@ -10,18 +10,8 @@
 			<!-- About Me -->
 			<div id="about" class="col-12 my-1 mt-0 pt-0">
 				<h1>About Me</h1>
-				<!-- About alternative 1 -->
-				<!-- <pre
-					class="mt-3 prettify"
-				><code class="language-typescript p-2">// Language: TypeScript
-const name: string = "Sebastian Pritchard-Davies Mandal";
-const ethnicity: string = "Norwegian";
-const pronouns: string[] = ["he", "him"];
-let age: number = 16;</code></pre> -->
-
-				<!-- About alternative 2 -->
 				<pre
-					class="prettify mt-3 p-2"
+					class="prettify mt-3 p-2 about-me"
 				><code class="language-typescript">// Language: TypeScript
 this.person = new Human({
     name: "Sebastian Pritchard-Davies Mandal",
@@ -35,8 +25,52 @@ this.person = new Human({
 			<hr />
 
 			<!-- Education Timeline -->
+
 			<div id="education" class="col-12 my-1">
 				<h1>Education</h1>
+
+				<!-- Alternative -->
+				<div class="flexbox-item-grow-on-hover my-3">
+					<button
+						onclick="delay('https://ovre-eiker.kommune.no/skole-barnehage/grunnskole/vestfossen-barneskole')"
+						class="grow-item"
+						content="Vestfossen Barne- og Ungdomskole"
+						hover-content="Elementary"
+						style="
+							background-image: linear-gradient(
+									rgba(0, 0, 0, 0.5),
+									rgba(0, 0, 0, 0.5)
+								),
+								url('https://ovre-eiker.kommune.no/skole-barnehage/grunnskole/vestfossen-ungdomsskole/PublishingImages/Sider/side/VUS.png?RenditionID=6');
+						"
+					></button>
+					<button
+						onclick="delay('https://kischool.org')"
+						class="grow-item"
+						content="Kongsberg International School"
+						style="
+							background-image: linear-gradient(
+									rgba(0, 0, 0, 0.5),
+									rgba(0, 0, 0, 0.5)
+								),
+								url('https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/0000/laag/2020/1/14/10/kis.jpg?chk=5B5B89');
+						"
+					></button>
+					<button
+						onclick="delay('https://www.akademiet.no/vgs/skolesteder/drammen-sundland/')"
+						class="grow-item"
+						content="Akademiet VGS Sundland"
+						style="
+							background-image: linear-gradient(
+									rgba(0, 0, 0, 0.5),
+									rgba(0, 0, 0, 0.5)
+								),
+								url('https://www.akademiet.no/wp-content/uploads/2018/05/akademiet-drammen-vgs-56.jpg');
+						"
+					></button>
+				</div>
+
+				<!-- Current -->
 				<ul class="timeline">
 					<li class="timeline-item bg-white rounded ml-3 p-4 shadow">
 						<div class="timeline-arrow"></div>
