@@ -15,6 +15,16 @@ header {
 	font-size: 1.33em;
 }
 
+[contenteditable] {
+	outline: 0px solid transparent;
+}
+
+/* About Me Section */
+
+#about {
+	font-size: 1.33rem;
+}
+
 /* Links */
 
 .link:hover {
@@ -50,7 +60,7 @@ ul.timeline {
 
 ul.timeline:before {
 	content: " ";
-	background: #fff;
+	background: #545454;
 	display: inline-block;
 	position: absolute;
 	left: 16px;
@@ -66,7 +76,7 @@ li.timeline-item {
 
 .timeline-arrow {
 	border-top: 0.5rem solid transparent;
-	border-right: 0.5rem solid #fff;
+	border-right: 0.5rem solid rgb(49, 49, 49);
 	border-bottom: 0.5rem solid transparent;
 	display: block;
 	position: absolute;
@@ -75,14 +85,67 @@ li.timeline-item {
 
 li.timeline-item::before {
 	content: " ";
-	background: #ddd;
+	background: rgb(255, 255, 255);
 	display: inline-block;
 	position: absolute;
 	border-radius: 50%;
-	border: 3px solid #fff;
+	border: 3px solid rgb(49, 49, 49);
 	left: 11px;
 	width: 14px;
 	height: 14px;
 	z-index: 400;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Flexbox items that grow when you hover over them */
+
+.flexbox-item-grow-on-hover {
+	margin: 0 auto;
+	width: 100%;
+	min-height: 200px;
+	/* border: 1px solid lighten(black, 10); */
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.grow-item {
+	flex-grow: 1;
+	height: 200px;
+	background-size: cover;
+	position: relative;
+	/* border: 1px solid lighten(black, 10); */
+	transition: all 1000ms cubic-bezier(0.68, -0.45, 0.365, 1.55);
+	overflow: hidden;
+}
+
+.grow-item:hover {
+	flex-grow: 3;
+}
+
+.grow-item p {
+	display: none;
+}
+
+.grow-item:hover p {
+	display: block;
+}
+
+.grow-item:before {
+	content: attr(content);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+}
+
+@media (max-width: 768px) {
+	.grow-item {
+		min-width: 100%;
+	}
+
+	.grow-item:before {
+		content: attr(content-mobile);
+	}
 }
