@@ -4,7 +4,7 @@
 		<%- include("./partials/head.ejs") %>
 		<title>sebmandal</title>
 	</head>
-	<body>
+	<body onload="await validateLoadTime()">
 		<section id="page-content" class="container-md" style="display: none">
 			<%- include("./partials/nav.ejs") %>
 			<div class="row">
@@ -30,12 +30,14 @@
 				<div id="education" class="col-12 my-1">
 					<h1>Education</h1>
 
-					<!-- Alternative -->
+					<!-- Education for all views -->
 					<div class="flexbox-item-grow-on-hover my-3">
-						<button
-							onclick="delay('https://ovre-eiker.kommune.no/skole-barnehage/grunnskole/vestfossen-barneskole')"
+						<a
+							href="https://ovre-eiker.kommune.no/skole-barnehage/grunnskole/vestfossen-barneskole"
+							target="_blank"
 							class="grow-item"
 							content="Vestfossen Barne- og Ungdomskole"
+							content-mobile="Elementary - Vestfossen Barne- og Ungdomskole"
 							hover-content="Elementary"
 							style="
 								background-image: linear-gradient(
@@ -44,11 +46,13 @@
 									),
 									url('/img/index items/vestfossen barneskole is garbage.png');
 							"
-						></button>
-						<button
-							onclick="delay('https://kischool.org')"
+						></a>
+						<a
+							href="https://kischool.org"
+							target="_blank"
 							class="grow-item"
 							content="Kongsberg International School"
+							content-mobile="Middle - Kongsberg International School"
 							style="
 								background-image: linear-gradient(
 										rgba(0, 0, 0, 0.5),
@@ -56,11 +60,13 @@
 									),
 									url('/img/index items/KIS.jpg');
 							"
-						></button>
-						<button
-							onclick="delay('https://www.akademiet.no/vgs/skolesteder/drammen-sundland/')"
+						></a>
+						<a
+							href="https://www.akademiet.no/vgs/skolesteder/drammen-sundland/"
+							target="_blank"
 							class="grow-item"
 							content="Akademiet VGS Sundland"
+							content-mobile="High School - Akademiet VGS Sundland"
 							style="
 								background-image: linear-gradient(
 										rgba(0, 0, 0, 0.5),
@@ -68,14 +74,15 @@
 									),
 									url('/img/index items/Akademiet.jpg');
 							"
-						></button>
+						></a>
 					</div>
+					<!-- Education for all views End -->
 
-					<!-- Current -->
-					<ul class="timeline">
+					<!-- Education for Desktop Only -->
+					<ul class="timeline d-none d-md-block">
 						<li class="timeline-item bg-white rounded ml-3 p-4 shadow">
 							<div class="timeline-arrow"></div>
-							<h3 class="mb-0 mb-1">Elementary School</h3>
+							<h3 class="mb-0 mb-1">Elementary</h3>
 							<h4 class="mb-0">
 								<i class="bi bi-pin p-1"></i>Vestfossen Barne- og Ungdomskole
 							</h4>
@@ -86,14 +93,14 @@
 						</li>
 						<li class="timeline-item bg-white rounded ml-3 p-4 shadow">
 							<div class="timeline-arrow"></div>
-							<h3 class="mb-0 mb-1">Middle / Secondary</h3>
+							<h3 class="mb-0 mb-1">Middle</h3>
 							<h4 class="mb-0">
 								<i class="bi bi-pin p-1"></i>Kongsberg International School
 							</h4>
 							<span class="small text-gray"
 								><i class="fa fa-clock-o mr-1"></i>2017 - 2021</span
 							>
-							<p class="mt-2 font-weight-light">Secondary - Grade 7 to 10</p>
+							<p class="mt-2 font-weight-light">Middle - Grade 7 to 10</p>
 						</li>
 						<li class="timeline-item bg-white rounded ml-3 p-4 shadow">
 							<div class="timeline-arrow"></div>
@@ -106,13 +113,12 @@
 							<span class="small text-gray"
 								><i class="fa fa-clock-o mr-1"></i>2021 - 2023</span
 							>
-							<p class="mt-2 font-weight-light">
-								Upper secondary - Grade 11 to 12
-							</p>
+							<p class="mt-2 font-weight-light">High School - Grade 11 to 12</p>
 						</li>
 					</ul>
+					<!-- Education for Desktop Only End -->
 				</div>
-				<!-- End -->
+				<!-- About Me End -->
 
 				<hr />
 
@@ -199,7 +205,7 @@
 						</li>
 					</ul>
 				</div>
-				<!-- End -->
+				<!-- Product Display End -->
 			</div>
 
 			<hr />
