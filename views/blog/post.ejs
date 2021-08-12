@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<%- include("./partials/head.ejs") %>
+		<%- include("../partials/head.ejs") %>
 		<title>sebmandal</title>
 	</head>
 	<body class="container blog-post">
 		<div class="row text-center">
-			<%- include("./partials/nav.ejs") %> <% if (post === undefined) { %>
+			<%- include("../partials/nav.ejs") %> <% if (post === undefined) { %>
 			<h1>The blog post specified does not exist.</h1>
 			<% } else { %>
 			<h1><%= post.title %></h1>
@@ -18,6 +18,6 @@
 
 		<hr />
 
-		<%- include("./partials/footer.ejs") %>
+		<%- include("../partials/footer.ejs") %>
 	</body>
 </html>

@@ -7,8 +7,7 @@ const script = (req: any, res: Express.Response) => {
 	const blogPost = blogPosts.find(
 		(blogPost: any) => blogPost.id === req.query.id
 	);
-	console.log(blogPosts, blogPost);
-	return res.render("blog_post", {
+	return res.render("blog/post", {
 		post: blogPost,
 	});
 };

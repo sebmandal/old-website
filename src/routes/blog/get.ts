@@ -4,7 +4,7 @@ import fs from "fs";
 
 const script = (req: Express.Request, res: Express.Response) => {
 	const blogPosts = JSON.parse(fs.readFileSync("data/blogs.json", "utf8"));
-	return res.render("blog", { blogPosts: blogPosts });
+	return res.render("blog/blog", { blogPosts: blogPosts });
 };
 
 export default class Home extends Route {

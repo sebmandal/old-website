@@ -4,7 +4,7 @@ import fs from "fs";
 
 const script = (req: Express.Request, res: Express.Response) => {
 	const blogPosts = JSON.parse(fs.readFileSync("data/blogs.json", "utf8"));
-	return res.render("dashboard", {
+	return res.render("blog/dashboard", {
 		session: req.session,
 		blogPosts: blogPosts,
 	});
