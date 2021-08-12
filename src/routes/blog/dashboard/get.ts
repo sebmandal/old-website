@@ -10,7 +10,7 @@ const script = (req: Express.Request, res: Express.Response) => {
 	});
 };
 
-export default class Home extends Route {
+export default class BlogDashboardGet extends Route {
 	/**
 	 * super()
 	 * @param path the URL path (/blog/dashboard)

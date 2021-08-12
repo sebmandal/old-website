@@ -43,11 +43,16 @@
 			<hr />
 			<h1>All posts</h1>
 			<% blogPosts.forEach(post => { %>
-			<div class="col-md-4 p-3 mb-5">
+			<div class="border col-md-4 p-3 mb-2">
 				<a class="text-reset" href="/blog/post?id=<%= post.id %>"
 					><h1><%= post.title %></h1></a
 				>
 				<h4 class="text-muted"><%= post.description %></h4>
+				<a
+					href="/blog/dashboard/edit?id=<%= post.id %> "
+					class="btn btn-primary"
+					>Edit</a
+				>
 			</div>
 			<% }) %> <% } else { %>
 			<h1>Login</h1>

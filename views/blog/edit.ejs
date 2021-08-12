@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include("../partials/head.ejs") %>
+		<title>sebmandal</title>
+	</head>
+	<body class="container-md">
+		<%- include("../partials/nav.ejs") %>
+		<div class="row">
+			<% if (!post) { %>
+			<h1>The blog post specified does not exist.</h1>
+			<% } else { %>
+			<form
+				class="mb-3"
+				action="/blog/dashboard/edit/<%= post.id %>"
+				method="post"
+			>
+				<div class="form-group mb-3">
+					<label for="id"
+						>ID <small class="text-muted fst-italic">(readonly)</small></label
+					>
+					<input
+						readonly
+						name="id"
+						type="text"
+						class="form-control shadow-none"
+						value="<%= post.id %>"
+					/>
+				</div>
+				<div class="form-group mb-3">
+					<label for="title">Title</label>
+					<input
+						required
+						name="title"
+						type="text"
+						class="form-control shadow-none"
+						value="<%= post.title %>"
+					/>
+				</div>
+				<div class="form-group mb-3">
+					<label for="description">Description</label>
+					<textarea
+						required
+						name="description"
+						type="text"
+						class="form-control shadow-none"
+					>
+<%= post.description %></textarea
+					>
+				</div>
+				<div class="form-group mb-3">
+					<label for="content">Content (HTML)</label>
+					<code>
+						<textarea
+							required
+							name="content"
+							type="text"
+							class="form-control shadow-none"
+						>
+<%= post.content %></textarea
+						>
+					</code>
+				</div>
+				<input type="submit" value="Upload" class="btn btn-secondary" />
+			</form>
+			<% } %>
+		</div>
+
+		<hr />
+
+		<%- include("../partials/footer.ejs") %>
+	</body>
+</html>

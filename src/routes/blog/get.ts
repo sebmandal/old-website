@@ -7,7 +7,7 @@ const script = (req: Express.Request, res: Express.Response) => {
 	return res.render("blog/blog", { blogPosts: blogPosts });
 };
 
-export default class Home extends Route {
+export default class BlogGet extends Route {
 	/**
 	 * super()
 	 * @param path the URL path (/blog)

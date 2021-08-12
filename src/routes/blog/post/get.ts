@@ -12,7 +12,7 @@ const script = (req: any, res: Express.Response) => {
 	});
 };
 
-export default class Home extends Route {
+export default class BlogPost extends Route {
 	/**
 	 * super()
 	 * @param path the URL path (/blog/post)

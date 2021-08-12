@@ -27,7 +27,7 @@ const script = (req: any, res: Express.Response) => {
 		id: genID(),
 		title: req.body.title,
 		description: req.body.description,
-		date: new Date(Date.now()).toLocaleString(),
+		published: new Date(Date.now()).toLocaleString(),
 		content: req.body.content,
 	};
 	blogPosts.unshift(newBlog); //unshift instead of push because latest is first
@@ -36,7 +36,7 @@ const script = (req: any, res: Express.Response) => {
 	return res.redirect("/blog/dashboard");
 };
 
-export default class Home extends Route {
+export default class BlogPost extends Route {
 	/**
 	 * super()
 	 * @param path the URL path (/blog)

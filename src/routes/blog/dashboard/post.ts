@@ -19,7 +19,7 @@ const script = (req: Express.Request, res: Express.Response) => {
 	return res.redirect("/blog/dashboard");
 };
 
-export default class Home extends Route {
+export default class BlogDashboardPost extends Route {
 	/**
 	 * super()
 	 * @param path the URL path (/blog/dashboard)

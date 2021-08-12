@@ -5,12 +5,12 @@
 		<title>sebmandal</title>
 	</head>
 	<body class="container-md blog-post">
-		<div class="text-center container">
-			<%- include("../partials/nav.ejs") %> <% if (post === undefined) { %>
+		<div class="container mb-2">
+			<%- include("../partials/nav.ejs") %> <% if (!post) { %>
 			<h1>The blog post specified does not exist.</h1>
 			<% } else { %>
-			<h1><%= post.title %></h1>
-			<h4 class="fst-italic"><%= post.description %></h4>
+			<h1 class="text-center"><%= post.title %></h1>
+			<h4 class="fst-italic text-center"><%= post.description %></h4>
 			<p class="text-muted fst-italic"><%= post.date %></p>
 			<div><%- post.content %></div>
 			<% } %>
