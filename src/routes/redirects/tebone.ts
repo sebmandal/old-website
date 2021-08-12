@@ -1,11 +1,11 @@
-import Route from "../core/route";
+import Route from "../../core/route";
 import Express from "express";
 
 const script = (req: Express.Request, res: Express.Response) => {
-	return res.render("trespassers", req.session);
+	return res.redirect("https://github.com/sebmandal/tebone");
 };
 
-export default class Trespassers extends Route {
+export default class TeboneRedirect extends Route {
 	/**
 	 * super()
 	 * parameter 1: the URL path (/)
@@ -13,6 +13,6 @@ export default class Trespassers extends Route {
 	 * parameter 3: the Express middleware/handler function (script)
 	 **/
 	constructor() {
-		super("/trespassers", "get", script);
+		super("/tebone", "get", script);
 	}
 }

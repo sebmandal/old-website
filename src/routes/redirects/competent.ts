@@ -1,11 +1,11 @@
-import Route from "../core/route";
+import Route from "../../core/route";
 import Express from "express";
 
 const script = (req: Express.Request, res: Express.Response) => {
-	return res.redirect("https://github.com/sebmandal");
+	return res.redirect("https://competentprogrammer.com");
 };
 
-export default class GithubRedirect extends Route {
+export default class CompetentProgrammerRedirect extends Route {
 	/**
 	 * super()
 	 * parameter 1: the URL path (/)
@@ -13,6 +13,6 @@ export default class GithubRedirect extends Route {
 	 * parameter 3: the Express middleware/handler function (script)
 	 **/
 	constructor() {
-		super("/github", "get", script);
+		super("/comp", "get", script);
 	}
 }

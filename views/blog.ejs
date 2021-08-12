@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include("./partials/head.ejs") %>
+		<title>sebmandal</title>
+	</head>
+	<body class="container-md">
+		<%- include("./partials/nav.ejs") %>
+		<div class="row text-center">
+			<h1 class="text-center">the blog</h1>
+			<hr />
+			<% blogPosts.forEach(post => { %>
+			<div class="col-md-4 p-3 my-3">
+				<a
+					class="text-reset"
+					href="/blog/post?id=<%= blogPosts.indexOf(post) %>"
+					><h1><%= post.title %></h1></a
+				>
+				<h4 class="text-muted"><%= post.description %></h4>
+			</div>
+			<% }) %>
+		</div>
+
+		<hr />
+
+		<%- include("./partials/footer.ejs") %>
+	</body>
+</html>
