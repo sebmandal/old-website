@@ -4,7 +4,13 @@ import fs from "fs";
 
 const script = (req: any, res: Express.Response) => {
 	const blogPosts = JSON.parse(fs.readFileSync("data/blogs.json", "utf8"));
-	return res.render("blog_post", { post: blogPosts[parseInt(req.query.id)] });
+	const blogPost = blogPosts.find(
+		(blogPost: any) => blogPost.id === req.query.id
+	);
+	console.log(blogPosts, blogPost);
+	return res.render("blog_post", {
+		post: blogPost,
+	});
 };
 
 export default class Home extends Route {
