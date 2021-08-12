@@ -17,7 +17,6 @@ const script = (req: Express.Request, res: Express.Response) => {
 		blogPost.description = req.body.description;
 		blogPost.content = req.body.content;
 
-		console.log(blogPosts);
 		fs.writeFileSync("data/blogs.json", JSON.stringify(blogPosts, null, 4));
 
 		return res.redirect("/blog/dashboard");
