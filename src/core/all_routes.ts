@@ -9,6 +9,7 @@ import blogDashboardGet from "../routes/blog/dashboard/get";
 import blogDashboardPost from "../routes/blog/dashboard/post";
 import blogDashboardEditGet from "../routes/blog/dashboard/edit/get";
 import blogDashboardEditPost from "../routes/blog/dashboard/edit/post";
+import blogDashboardDeleteGet from "../routes/blog/dashboard/delete/get";
 
 // redirect
 import mandoRedirect from "../routes/redirects/mando";
@@ -24,7 +25,7 @@ export default {
 	blogGet,
 	blogPost,
 
-	//specific blog post
+	//see a specific blog post
 	blogPostGet,
 
 	//blog dashboard
@@ -34,6 +35,9 @@ export default {
 	//editing a specific blog post
 	blogDashboardEditGet,
 	blogDashboardEditPost,
+
+	//deleting a specific blog post
+	blogDashboardDeleteGet,
 
 	//redirect
 	mandoRedirect,

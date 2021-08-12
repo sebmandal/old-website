@@ -10,7 +10,7 @@ const script = (req: Express.Request, res: Express.Response) => {
 	};
 
 	if (
-		inputs.name === process.env.DASHBOARD_LOGIN! ||
+		inputs.name === process.env.DASHBOARD_LOGIN! &&
 		inputs.password === process.env.DASHBOARD_PASSWORD!
 	) {
 		req.session["authorized"] = true;
