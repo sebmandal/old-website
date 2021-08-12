@@ -44,9 +44,7 @@
 			<h1>All posts</h1>
 			<% blogPosts.forEach(post => { %>
 			<div class="col-md-4 p-3 mb-5">
-				<a
-					class="text-reset"
-					href="/blog/post?id=<%= blogPosts.indexOf(post) %>"
+				<a class="text-reset" href="/blog/post?id=<%= post.id %>"
 					><h1><%= post.title %></h1></a
 				>
 				<h4 class="text-muted"><%= post.description %></h4>

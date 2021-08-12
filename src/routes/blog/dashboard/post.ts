@@ -13,7 +13,7 @@ const script = (req: Express.Request, res: Express.Response) => {
 		inputs.name === process.env.DASHBOARD_LOGIN! ||
 		inputs.password === process.env.DASHBOARD_PASSWORD!
 	) {
-		req.session.authorized = true;
+		req.session["authorized"] = true;
 	}
 
 	return res.redirect("/blog/dashboard");

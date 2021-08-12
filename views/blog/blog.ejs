@@ -6,12 +6,13 @@
 	</head>
 	<body class="container-md">
 		<%- include("../partials/nav.ejs") %>
-		<div class="row text-center">
-			<h1 class="text-center">the blog</h1>
-			<hr />
+		<div class="row">
+			<h1 class="">My blog</h1>
 			<% blogPosts.forEach(post => { %>
-			<div class="col-md-4 p-3 my-3">
-				<a class="text-reset" href="/blog/post?id=<%= post.id %>"
+			<div class="border col-md-4 p-3 my-3">
+				<a
+					class="text-reset text-decoration-none"
+					href="/blog/post?id=<%= post.id %>"
 					><h1><%= post.title %></h1></a
 				>
 				<h4 class="text-muted"><%= post.description %></h4>
