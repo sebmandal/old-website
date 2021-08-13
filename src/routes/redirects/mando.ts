@@ -1,11 +1,11 @@
-import Route from "../core/route";
+import Route from "../../core/route";
 import Express from "express";
 
 const script = (req: Express.Request, res: Express.Response) => {
-	return res.redirect("https://github.com/sebmandal/tebone");
+	return res.redirect("https://github.com/sebmandal/mando");
 };
 
-export default class TeboneRedirect extends Route {
+export default class MandoRedirect extends Route {
 	/**
 	 * super()
 	 * parameter 1: the URL path (/)
@@ -13,6 +13,6 @@ export default class TeboneRedirect extends Route {
 	 * parameter 3: the Express middleware/handler function (script)
 	 **/
 	constructor() {
-		super("/tebone", "get", script);
+		super("/mando", "get", script);
 	}
 }

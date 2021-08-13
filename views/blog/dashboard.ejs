@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include("../partials/head.ejs") %>
+		<title>sebmandal</title>
+	</head>
+	<body class="container-md">
+		<%- include("../partials/nav.ejs") %>
+		<div class="row">
+			<% if (session.authorized) { %>
+			<h2>Todo</h2>
+			<ol>
+				<li>Allow to edit posts</li>
+				<li>Style the blogs and dashboard</li>
+			</ol>
+			<hr />
+			<h1>Make a new article</h1>
+			<form class="mb-3" action="/blog" method="post">
+				<div class="form-group mb-3">
+					<label for="title">Title</label>
+					<input required name="title" type="text" class="form-control" />
+				</div>
+				<div class="form-group mb-3">
+					<label for="description">Description</label>
+					<textarea
+						required
+						name="description"
+						type="text"
+						class="form-control"
+					></textarea>
+				</div>
+				<div class="form-group mb-3">
+					<label for="content">Content (HTML)</label>
+					<textarea
+						required
+						name="content"
+						type="text"
+						class="form-control"
+					></textarea>
+				</div>
+				<input type="submit" value="Upload" class="btn btn-secondary" />
+			</form>
+			<hr />
+			<h1>All posts</h1>
+			<% blogPosts.forEach(post => { %>
+			<div class="border col-md-4 p-3 mb-2">
+				<a class="text-reset" href="/blog/post?id=<%= post.id %>"
+					><h1><%= post.title %></h1></a
+				>
+				<h4 class="text-muted"><%= post.description %></h4>
+				<a
+					href="/blog/dashboard/edit?id=<%= post.id %> "
+					class="btn btn-primary"
+					>Edit</a
+				>
+				<a
+					href="/blog/dashboard/delete?id=<%= post.id %> "
+					class="btn btn-primary"
+					>Delete</a
+				>
+			</div>
+			<% }) %> <% } else { %>
+			<h1>Login</h1>
+			<form action="/blog/dashboard" method="post">
+				<input name="name" type="name" placeholder="Login name" />
+				<input name="password" type="password" placeholder="Login password" />
+				<input type="submit" value="submit" />
+			</form>
+			<% } %>
+		</div>
+
+		<hr />
+
+		<%- include("../partials/footer.ejs") %>
+	</body>
+</html>

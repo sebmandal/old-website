@@ -21,8 +21,23 @@ app.use(
 		resave: false,
 		saveUninitialized: true,
 		cookie: {
-			secure: true, // true if https (not http)
+			// secure: true, // true if https (not http)
 		},
+	})
+);
+// further session configs
+declare module "express-session" {
+	interface SessionData {
+		authorized: boolean;
+	}
+}
+
+// body-parser setup
+import bodyParser from "body-parser";
+app.use(bodyParser.json());
+app.use(
+	bodyParser.urlencoded({
+		extended: false,
 	})
 );
 
